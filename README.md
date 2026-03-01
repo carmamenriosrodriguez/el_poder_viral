@@ -157,4 +157,4 @@ Tras analizar el comportamiento digital, identificamos cuatro pilares psicológi
     streamlit run app.py
 
 
-    ´Dominar la viralidad no es solo predecir un éxito, es asegurar que nuestras voces no se pierdan en el vacío y que cada mensaje encuentre su eco en el corazón del lector.´
+´Dominar la viralidad no es solo predecir un éxito, es asegurar que nuestras voces no se pierdan en el vacío y que cada mensaje encuentre su eco en el corazón del lector.´
