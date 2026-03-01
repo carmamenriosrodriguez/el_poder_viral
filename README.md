@@ -100,10 +100,6 @@ El proyecto incluye:
         **7. Variable Objetivo (Target)**
 
         shares: El número total de veces que el artículo fue compartido en redes sociales. Esta es la métrica de éxito.
-
-
-        shares: El número total de veces que el artículo fue compartido en redes sociales. Esta es la métrica de éxito.
-
     
     #### 3.1. Diccionario final: 
     -  El dataset final (df_final.csv) es el resultado de un proceso de limpieza y selección de características:
@@ -144,9 +140,9 @@ Tras analizar el comportamiento digital, identificamos cuatro pilares psicológi
 * Balance de clases: Se observó una distribución desigual entre artículos virales y no virales, lo que requirió ajustes en las métricas de evaluación (Accuracy vs. F1-Score).
 
 ## 7. Próximos pasos
-* Análisis NLP Avanzado: Incorporar modelos de lenguaje (como BERT) para entender mejor el contexto semántico más allá de la polaridad básica.
-* Segmentación por Red Social: Diferenciar si un artículo es viral en X (Twitter), Facebook o LinkedIn de forma independiente.
-* Actualización en Tiempo Real: Conectar la aplicación a una API de noticias para analizar tendencias en vivo.
+* Análisis NLP avanzado: Incorporar modelos de lenguaje (como BERT) para entender mejor el contexto semántico más allá de la polaridad básica.
+* Segmentación por red social: Diferenciar si un artículo es viral en X (Twitter), Facebook o LinkedIn de forma independiente.
+* Actualización en tiempo real: Conectar la aplicación a una API de noticias para analizar tendencias en vivo.
 
 ## 8. Cómo replicar el proyecto
     a. Clonar el repositorio.
@@ -157,4 +153,4 @@ Tras analizar el comportamiento digital, identificamos cuatro pilares psicológi
     streamlit run app.py
 
 
-´Dominar la viralidad no es solo predecir un éxito, es asegurar que nuestras voces no se pierdan en el vacío y que cada mensaje encuentre su eco en el corazón del lector.´
+`Dominar la viralidad no es solo predecir un éxito, es asegurar que nuestras voces no se pierdan en el vacío y que cada mensaje encuentre su eco en el corazón del lector.`
