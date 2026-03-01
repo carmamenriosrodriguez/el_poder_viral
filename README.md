@@ -1,8 +1,7 @@
-# El_poder_viral
+# El poder viral
 *Análisis predictivo de la viralidad de contenidos en Mashable.*
 
 **Carmen Ríos Rodríguez**
-
 *Data Analyst*
 
 ## 1. **Objetivo del proyecto**
@@ -108,36 +107,54 @@ El proyecto incluye:
     
     #### 3.1. Diccionario final: 
     -  El dataset final (df_final.csv) es el resultado de un proceso de limpieza y selección de características:
-        * Rendimiento Histórico: rendimiento_promedio_media.
-        * Contenido Multimedia: num_enlaces, num_imgs.
-        * Análisis de Texto: subjetividad_global, polaridad_negativa_media, subjetividad_titulo.
+        * Rendimiento histórico: rendimiento_promedio_media.
+        * Contenido multimedia: num_enlaces, num_imgs.
+        * Análisis de texto: subjetividad_global, polaridad_negativa_media, subjetividad_titulo.
         * Temporalidad: fin_de_semana.
         * Target: es_viral (variable binaria).
 
 
 ## 4. Metodología y modelos
 Se probaron diversos enfoques para maximizar la capacidad predictiva:
+
     * K-Nearest Neighbors (KNN): Utilizado inicialmente para explorar agrupamientos y regresión básica.
+
     * Modelos de ensamble: Se compararon Random Forest, AdaBoost y Gradient Boosting.
 
 También hubo una optimización de los dos modelos que mejor funcionaron. Se realizó una búsqueda de hiperparámetros mediante GridSearchCV y RandomizedSearchCV para ajustar el modelo final.
 
 - ´Modelo Final´: Un Random Forest Classifier optimizado (500 estimadores) que equilibra precisión y generalización, integrado en el backend de la aplicación.
+Este modelo funciona como una estructura colectiva que combina las conclusiones de múltiples árboles de decisión independientes. Al procesar fragmentos de información de manera aleatoria y alejar el sesgo individual, logramos una exactitud de casi el 65%.
 
-## 5. Limitaciones
+Este modelo es el motor de nuestra herramienta predictiva, permitiendo a los redactores prever si un futuro artículo tiene el potencial de "romper el silencio" digital.
+
+## 5. Algunos resultados
+¿Qué hace que una historia se vuelva viral?
+Tras analizar el comportamiento digital, identificamos cuatro pilares psicológicos que los datos confirman como motores de la viralidad:
+* Emoción intensa: Sorpresa, indignación, ternura o miedo.
+* Identificación personal: El lector se ve reflejado.
+* Utilidad práctica: Contenido que resuelve o enseña.
+* Capacidad de conversación: Historias que impulsan a ser compartidas para generar debate
+
+## 6. Limitaciones
+* Complejidad de variables: La enorme cantidad de variables y, en ocasiones, su débil correlación directa inicial, supuso un reto para el ajuste del modelo.
+* Evolución del comportamiento: El modelo requiere entrenamiento continuo con nuevos entornos y datos para seguir el ritmo de la cambiante conducta de los usuarios.
 * Subjetividad del éxito: La viralidad se define mediante un umbral (threshold) de "shares", lo cual puede variar según la categoría del artículo.
 * Datos temporales: El análisis se basa en una captura estática de datos; no considera tendencias virales de última hora o eventos globales impredecibles.
 * Balance de clases: Se observó una distribución desigual entre artículos virales y no virales, lo que requirió ajustes en las métricas de evaluación (Accuracy vs. F1-Score).
 
-## 6. Próximos pasos
+## 7. Próximos pasos
 * Análisis NLP Avanzado: Incorporar modelos de lenguaje (como BERT) para entender mejor el contexto semántico más allá de la polaridad básica.
 * Segmentación por Red Social: Diferenciar si un artículo es viral en X (Twitter), Facebook o LinkedIn de forma independiente.
 * Actualización en Tiempo Real: Conectar la aplicación a una API de noticias para analizar tendencias en vivo.
 
-## 7. Cómo replicar el proyecto
+## 8. Cómo replicar el proyecto
     a. Clonar el repositorio.
     b. Instalar librerías: pandas, numpy, matplotlib, seaborn, scikit-learn, streamlit.
     c. Preparación de datos: Ejecutar el notebook 01. Limpieza (El poder viral).ipynb para generar los archivos procesados.
     d. Entrenamiento: Los notebooks 02, 03 y 04 contienen el flujo de experimentación de modelos.
     e. Ejecutar la App: ```bash
     streamlit run app.py
+
+
+    ´Dominar la viralidad no es solo predecir un éxito, es asegurar que nuestras voces no se pierdan en el vacío y que cada mensaje encuentre su eco en el corazón del lector.´
