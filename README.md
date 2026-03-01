@@ -1,13 +1,14 @@
 # El_poder_viral
-Análisis predictivo de la viralidad de contenidos en Mashable.
+*Análisis predictivo de la viralidad de contenidos en Mashable.*
 
-Carmen Ríos Rodríguez
-Data Analyst
+**Carmen Ríos Rodríguez**
 
-1. **Objetivo del proyecto**
+*Data Analyst*
+
+## 1. **Objetivo del proyecto**
 El objetivo de este proyecto es identificar los factores clave que determinan si un artículo de noticias digitales se convertirá en "viral". Mediante el uso de modelos de Machine Learning, buscamos predecir el éxito de una publicación (medido en número de veces compartida) basándonos en atributos como la temática, el día de publicación, el uso de multimedia y el análisis de sentimiento del texto.
 
-2. **Contexto del negocio**
+## 2. **Contexto del negocio**
 En la era de la saturación de información, del exceso de noticias y la sobreestimulación, entender qué contenidos resuenan con la audiencia es crítico para los medios digitales. Este estudio utiliza un dataset de artículos publicados por Mashable para responder a la pregunta: ¿Podemos predecir la viralidad antes de publicar?
 
 El proyecto incluye:
@@ -17,10 +18,10 @@ El proyecto incluye:
     * El despliegue de una herramienta interactiva (Streamlit) que permite a los redactores probar sus artículos antes de lanzarlos.
 
 
-3. Fuentes y variables
+## 3. Fuentes y variables
 - Iniciamos con un dataset con +40 mil registros donde se analizan bajo 63 variables la estructura y la sentimentalidad y viralidad de los artículos de Mashable. 
-    3.1. Diccionario original: 
-    ## Diccionario original de nuestro dataset
+    #### 3.1. Diccionario original: 
+    - Diccionario original de nuestro dataset
         **1. Metadatos del Artículo**
 
         url: El enlace al artículo (se usa como identificador).
@@ -105,7 +106,7 @@ El proyecto incluye:
         shares: El número total de veces que el artículo fue compartido en redes sociales. Esta es la métrica de éxito.
 
     
-    3.1. Diccionario final: 
+    #### 3.1. Diccionario final: 
     -  El dataset final (df_final.csv) es el resultado de un proceso de limpieza y selección de características:
         * Rendimiento Histórico: rendimiento_promedio_media.
         * Contenido Multimedia: num_enlaces, num_imgs.
@@ -114,7 +115,7 @@ El proyecto incluye:
         * Target: es_viral (variable binaria).
 
 
-4. Metodología y modelos
+## 4. Metodología y modelos
 Se probaron diversos enfoques para maximizar la capacidad predictiva:
     * K-Nearest Neighbors (KNN): Utilizado inicialmente para explorar agrupamientos y regresión básica.
     * Modelos de ensamble: Se compararon Random Forest, AdaBoost y Gradient Boosting.
@@ -123,17 +124,17 @@ También hubo una optimización de los dos modelos que mejor funcionaron. Se rea
 
 - ´Modelo Final´: Un Random Forest Classifier optimizado (500 estimadores) que equilibra precisión y generalización, integrado en el backend de la aplicación.
 
-5. Limitaciones
+## 5. Limitaciones
 * Subjetividad del éxito: La viralidad se define mediante un umbral (threshold) de "shares", lo cual puede variar según la categoría del artículo.
 * Datos temporales: El análisis se basa en una captura estática de datos; no considera tendencias virales de última hora o eventos globales impredecibles.
 * Balance de clases: Se observó una distribución desigual entre artículos virales y no virales, lo que requirió ajustes en las métricas de evaluación (Accuracy vs. F1-Score).
 
-6. Próximos pasos
+## 6. Próximos pasos
 * Análisis NLP Avanzado: Incorporar modelos de lenguaje (como BERT) para entender mejor el contexto semántico más allá de la polaridad básica.
 * Segmentación por Red Social: Diferenciar si un artículo es viral en X (Twitter), Facebook o LinkedIn de forma independiente.
 * Actualización en Tiempo Real: Conectar la aplicación a una API de noticias para analizar tendencias en vivo.
 
-7. Cómo replicar el proyecto
+## 7. Cómo replicar el proyecto
     a. Clonar el repositorio.
     b. Instalar librerías: pandas, numpy, matplotlib, seaborn, scikit-learn, streamlit.
     c. Preparación de datos: Ejecutar el notebook 01. Limpieza (El poder viral).ipynb para generar los archivos procesados.
